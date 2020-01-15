@@ -9,6 +9,9 @@ ENV GOBIN /go/bin
 
 RUN go get github.com/chan-vince/maintenance
 
+# Move the default file into the right place
+RUN cp -r /go/src/github.com/chan-vince/maintenance/static /static
+
 # Run the outyet command by default when the container starts.
 ENTRYPOINT ["/go/bin/maintenance"]
 
