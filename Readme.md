@@ -34,7 +34,7 @@ version: '3'
 
 services:
   maintenance-page:
-    image: maintenance-page
+    image: vynology/maintenance-page
     container_name: maintenance-page
     restart: unless-stopped
     ports: 
