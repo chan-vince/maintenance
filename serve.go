@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	log.Println("Listening...")
+	log.Println("Listening on port 3000...")
 	http.HandleFunc("/", getMaintenancePage)
 	http.ListenAndServe(":3000", nil)
 }
