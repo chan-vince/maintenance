@@ -10,7 +10,7 @@ ENV GOBIN /go/bin
 RUN go get github.com/chan-vince/maintenance
 
 # Run the outyet command by default when the container starts.
-ENTRYPOINT /go/bin/maintenance
+ENTRYPOINT ["/go/bin/maintenance"]
 
 # Document that the service listens on port 8080.
 EXPOSE 3000
