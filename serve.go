@@ -12,5 +12,5 @@ func main() {
 }
 
 func getMaintenancePage(res http.ResponseWriter, req *http.Request) {
-	http.ServeFile(res, req, "/static/serve.html")
+	http.ServeFile(res, req, "/static/index.html")
 }
