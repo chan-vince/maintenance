@@ -20,7 +20,7 @@ docker build path-to-this-repo/ -t maintenance:latest
 
 Alternatively, a pre-built container is available:
 ```
-docker pull vynology/maintenance-page:latest
+docker pull vynology/maintenance:latest
 ```
 
 ### Docker Compose
@@ -34,8 +34,8 @@ version: '3'
 
 services:
   maintenance-page:
-    image: vynology/maintenance-page
-    container_name: maintenance-page
+    image: vynology/maintenance
+    container_name: maintenance
     restart: unless-stopped
     ports: 
       - 3000:3000
@@ -49,7 +49,7 @@ For traefik, some useful labels:
     labels:
       - "traefik.enable=true"
       - "traefik.port=3000"
-      - "traefik.backend=maintenance-page"
+      - "traefik.backend=maintenance"
       - "traefik.frontend.rule=Host:maintenance.${DOMAINNAME}"  
       - "traefik.docker.network=default"  
       - "traefik.frontend.headers.SSLRedirect=true"
