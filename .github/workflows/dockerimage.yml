@@ -18,4 +18,5 @@ jobs:
           USERNAME: ${{ secrets.DOCKER_USERNAME }}
           PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           IMAGE_NAME: "vynology/maintenance"
+          TAG_NAME: "stable"
           LATEST: "true"
